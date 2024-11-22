@@ -20,8 +20,8 @@ namespace HW_13.Services
             foreach (Book b in BRepo.ReadAll())
             {
                 if (b.Status == StatusEnum.available)
-                { str += $"{b.Id}) {b.Title}   -{b.Description}-     |{b.Author}    {b.Price}$   |>  {b.Status}"; }
-                else { str += $"{b.Id}) {b.Title}   -{b.Description}-     |{b.Author}    {b.Price}$   |> {b.Status}  >  {URepo.ReadById(b.Id).UserName}"; }
+                { str += $"{b.Id}) {b.Title}   -{b.Description}-     |{b.Author}    {b.Price}$   |>  {b.Status}\n"; }
+                else { str += $"{b.Id}) {b.Title}   -{b.Description}-     |{b.Author}    {b.Price}$   |> {b.Status}   \n"; }
             }
             if (str == "") { return "no books in database"; }
             return str;

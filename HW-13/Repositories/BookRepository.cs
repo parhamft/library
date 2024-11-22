@@ -35,7 +35,7 @@ namespace HW_13.Repositories
 
         public Book ReadById(int id)
         {
-            return _dbContext.books.AsNoTracking().FirstOrDefault();
+            return _dbContext.books.AsNoTracking().FirstOrDefault(x=>x.Id==id);
         }
 
         public bool Update(Book book)

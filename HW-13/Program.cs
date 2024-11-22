@@ -139,6 +139,7 @@ void UserMenu(User U)
                 case 5:
                     Console.Clear();
                     stop = true;
+                    U = null;
                     break;
                 default:
 
@@ -220,6 +221,7 @@ void AdminMenu(Admin A)
                 case 4:
                     Console.Clear();
                     stop = true;
+                    A=null;
                     break;
                 default:
 
